@@ -1,15 +1,21 @@
 import { React, useState } from 'react'
+import { useTransition, animated, } from 'react-spring'
 import Navbar from './Nav/Navbar'
 import Starter from "./Menu/FirstMenu"
 import Dish from './Menu/MainMenu'
 import Dessert from './Menu/Dessert'
+import Chef from './Chef/Chef'
 
 
 export default function Main() {
   const [starter, setStarter] = useState(true)
   const [dish, setDish] = useState(false)
   const [dessert, setDessert] = useState(false)
-
+  const transition = useTransition(starter, {
+    from: {x: 240, opacity:0},
+    enter: {x: 0, opacity: 1},
+    leave: {x: -240, opacity: 0},
+  })
   const handleModals = (e) => {
     if (e.target.id === "dish") {
       setDish(true);
@@ -26,6 +32,7 @@ export default function Main() {
     }
   };
 
+
   return (
     <div className='Main'>
       <Navbar />
@@ -39,6 +46,8 @@ export default function Main() {
             onClick={handleModals}
             id="starter"
           >
+            { ((style, starter) => 
+            starter ? <animated.starter style= {style}/> : "")}
             Les entrées
           </button>
           <button className='select-menu'
@@ -55,6 +64,7 @@ export default function Main() {
           </button>
         </div>
       </div>
+      <Chef />
     </div>
   )
 }

@@ -13,7 +13,7 @@ export default function Navbar() {
                 <div className='list-navbar'>
                        <div>Nos menus</div>
                     <div>
-                        Nos Chefs
+                        <a href='#nos-chefs'>Nos Chefs </a>
                     </div>
                     <div>
                         Nos valeurs

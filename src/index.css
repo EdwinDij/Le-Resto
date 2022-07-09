@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3a683;;
 }
 
 code {
@@ -18,7 +19,6 @@ code {
 
 .menu-components {
   padding: 8rem 15rem;
-  background-color:#f3a683 ;
  
 }
 

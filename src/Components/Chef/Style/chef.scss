@@ -1,0 +1,25 @@
+.chef-component {
+    padding: 8rem 15rem;
+}
+
+.chef {
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.chef-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.chef-presentation {
+    display: flex;
+    flex-direction: column;
+}
+.chef-picture {
+    width: 200px;
+    height: 200px;
+}
